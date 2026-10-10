@@ -1,0 +1,17 @@
+import { ROLES, PERMISSIONS } from '../../config/constants.js';
+
+export const defaultPermissionsByRole: Record<string, string[]> = {
+  [ROLES.OWNER]: ['*'],
+  [ROLES.ADMIN]: [
+    PERMISSIONS.MANAGE_PRODUCTS,
+    PERMISSIONS.MANAGE_INVENTORY,
+    PERMISSIONS.MANAGE_ORDERS,
+    PERMISSIONS.VIEW_ANALYTICS,
+    PERMISSIONS.USE_ASSISTANT,
+    PERMISSIONS.MANAGE_THEMES
+  ],
+  [ROLES.STAFF]: [
+    PERMISSIONS.MANAGE_ORDERS,
+    PERMISSIONS.MANAGE_INVENTORY
+  ]
+};

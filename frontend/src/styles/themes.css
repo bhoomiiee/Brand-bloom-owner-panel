@@ -1,0 +1,30 @@
+/* Themes CSS Variables for Headless Storefront */
+.theme-minimal {
+  --store-bg: #ffffff;
+  --store-text: #111827;
+  --store-accent: #000000;
+  --store-surface: #f9fafb;
+}
+
+.theme-editorial {
+  --store-bg: #fcfbf9;
+  --store-text: #1c1917;
+  --store-accent: #78350f;
+  --store-surface: #f5f5f4;
+  font-family: 'Playfair Display', serif;
+}
+
+.theme-bold {
+  --store-bg: #09090b;
+  --store-text: #fafafa;
+  --store-accent: #a855f7;
+  --store-surface: #18181b;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.theme-boutique {
+  --store-bg: #fffbf5;
+  --store-text: #292524;
+  --store-accent: #b45309;
+  --store-surface: #fef3c7;
+}
