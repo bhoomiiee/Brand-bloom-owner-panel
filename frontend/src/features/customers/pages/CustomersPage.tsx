@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHeader } from '../../../components/layout/PageHeader';
 import { useActiveStoreStore } from '../../../store/active-store.store';
@@ -210,7 +210,7 @@ export const CustomersPage: React.FC = () => {
           { key: 'all', label: 'All Customers', count: segmentCounts.all },
           { key: 'new', label: 'New', count: segmentCounts.new },
           { key: 'repeat', label: 'Repeat', count: segmentCounts.repeat },
-          { key: 'high_value', label: 'High Value ⭐', count: segmentCounts.high_value },
+          { key: 'high_value', label: 'High Value â­', count: segmentCounts.high_value },
           { key: 'inactive', label: 'Inactive (>90d)', count: segmentCounts.inactive }
         ].map(tab => {
           const isActive = selectedSegment === tab.key;
@@ -312,7 +312,7 @@ export const CustomersPage: React.FC = () => {
             textAlign: 'center'
           }}
         >
-          <span style={{ fontSize: '32px' }}>🌸</span>
+          <span style={{ fontSize: '32px' }}>ðŸŒ¸</span>
           <h3 style={{ color: 'var(--bb-burgundy)', marginTop: '12px', marginBottom: '6px' }}>
             No customers found
           </h3>
@@ -365,7 +365,7 @@ export const CustomersPage: React.FC = () => {
                       <div style={{ fontSize: '12px', color: 'var(--bb-muted-text)', marginTop: '2px' }}>{c.email}</div>
                     </td>
                     <td style={{ padding: '14px 18px', color: 'var(--bb-muted-text)', fontSize: '13px' }}>
-                      {c.phone || '—'}
+                      {c.phone || 'â€”'}
                     </td>
                     <td style={{ padding: '14px 18px', fontWeight: 700 }}>
                       {c.orderCount || 0}
@@ -381,22 +381,6 @@ export const CustomersPage: React.FC = () => {
                     </td>
                     <td style={{ padding: '14px 18px', textAlign: 'right' }}>
                       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-                        <Link
-                          to={`/customers/${c.id}`}
-                          style={{
-                            padding: '6px 12px',
-                            background: 'var(--bb-white)',
-                            border: '1px solid var(--bb-border)',
-                            color: 'var(--bb-burgundy)',
-                            borderRadius: '8px',
-                            textDecoration: 'none',
-                            fontSize: '12px',
-                            fontWeight: 600,
-                            boxShadow: '0 1px 2px rgba(61, 32, 43, 0.04)'
-                          }}
-                        >
-                          View Details
-                        </Link>
                         <button
                           onClick={() => handleExport(c)}
                           style={{

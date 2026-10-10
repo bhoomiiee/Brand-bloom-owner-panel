@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import healthRoutes from './health.routes.js';
 import publicRoutes from './public.routes.js';
 import authRoutes from '../modules/auth/auth.routes.js';
@@ -22,11 +22,13 @@ import analyticsRoutes from '../modules/analytics/analytics.routes.js';
 import assistantRoutes from '../modules/assistant/assistant.routes.js';
 import auditRoutes from '../modules/audit/audit.routes.js';
 import emailRoutes from '../modules/email/email.routes.js';
+import syncRoutes from './sync.routes.js';
 
 const apiRouter = Router();
 
 apiRouter.use('/health', healthRoutes);
 apiRouter.use('/public', publicRoutes);
+apiRouter.use('/sync', syncRoutes);
 apiRouter.use('/auth', authRoutes);
 apiRouter.use('/users', usersRoutes);
 apiRouter.use('/stores', storesRoutes);
