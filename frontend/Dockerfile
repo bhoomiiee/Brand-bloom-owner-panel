@@ -1,7 +1,8 @@
-﻿FROM node:20-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm ci || npm install
+RUN npm install @rollup/rollup-linux-x64-musl
 COPY . .
 RUN npm run build
 

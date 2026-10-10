@@ -1,4 +1,4 @@
-﻿name: Store Owner Portal CI/CD Pipeline
+name: Store Owner Portal CI/CD Pipeline
 
 on:
   push:
@@ -25,13 +25,14 @@ jobs:
       - name: Build Backend (TypeScript)
         run: |
           cd backend
-          npm ci
+          npm ci || npm install
           npm run build
 
       - name: Build Frontend (Vite Client)
         run: |
           cd frontend
-          npm ci
+          npm ci || npm install
+          npm install @rollup/rollup-linux-x64-gnu
           npm run build
 
   docker-build:
